@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import styled from 'styled-components';
+import TodosView from './components/test'
+
 
 const Input = styled.input`
   font-size: 1.25em;
@@ -46,6 +48,7 @@ class App extends Component {
 		 <div>
           <Input placeholder="@mxstbr" type="text" />
           <H1>hi all</H1>
+		  <TodosView />
 		 </div>
       </div>
     );
