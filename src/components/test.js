@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { observer } from 'mobx-react';
 
-@observer
+
 class MyComponent extends Component {
   render() {
-    return <div>123</div>;
+    return (
+      <h1>dasdasdasdasdasdasd</h1>
+    );
   }
+
 }
-
-
 
 export default MyComponent;

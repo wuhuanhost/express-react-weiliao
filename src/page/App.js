@@ -5,6 +5,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import TodosView from '../components/test';
 // import _ from 'lodash';
+import { observer } from 'mobx-react';
 
 const Input = styled.input`
   font-size: 1.25em;
@@ -23,6 +24,7 @@ const H1 = styled.h1`
   background-color: #a1a;
 `;
 
+@observer
 class App extends Component {
   componentDidMount() {
     console.log('Hello SunnyChuan');
@@ -36,6 +38,10 @@ class App extends Component {
       });
   }
   render() {
+    const { appStore, viewStore } = this.props;
+    console.log('+++++++++++++++++++++++++++++++=');
+    console.log(appStore);
+    console.log(viewStore);
     return (
       <div className='App'>
         <header className='App-header'>
@@ -47,12 +53,16 @@ class App extends Component {
         </p>
         <div>
           <Input placeholder='@mxstbr' type='text' />
-          <H1>hi all 1231231231231</H1>
+          <H1 onClick={this.testClick}>{appStore.number}</H1>
           <TodosView />
         </div>
       </div>
     );
   }
+  testClick = event => {
+    console.log(event);
+    this.props.appStore.add();
+  };
 }
 
 export default App;
