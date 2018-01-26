@@ -1,0 +1,8 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "jsx-quotes": ["error", "prefer-single"],
+    "quotes": ["error", "single"],
+    "no-var": "error"
+  }
+}
