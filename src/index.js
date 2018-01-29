@@ -9,8 +9,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Inbox from './components/inbox';
 import About from './components/about';
-
-
 //路由列表
 const Routes = () => (
   <div>
@@ -23,7 +21,7 @@ const Routes = () => (
 ReactDOM.render(
   <Provider store={new Store()}>
     <Router>
-      <Routes/>
+      <Routes />
     </Router>
   </Provider>,
   document.getElementById('root')
