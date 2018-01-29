@@ -10,14 +10,20 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Inbox from './components/inbox';
 import About from './components/about';
 
+
+//路由列表
+const Routes = () => (
+  <div>
+    <Route path='/' component={App} />
+    <Route path='/about' component={About} />
+    <Route path='/inbox' component={Inbox} />
+  </div>
+);
+
 ReactDOM.render(
   <Provider store={new Store()}>
     <Router>
-      <div>
-        <Route path='/' component={App} />
-        <Route path='/about' component={About} />
-        <Route path='/inbox' component={Inbox} />
-      </div>
+      <Routes/>
     </Router>
   </Provider>,
   document.getElementById('root')

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 // import _ from 'lodash';
-// import { observer, inject } from 'mobx-react';
-// import DevTools from 'mobx-react-devtools';
-// import { useStrict } from 'mobx';
+import { observer, inject } from 'mobx-react';
+import DevTools from 'mobx-react-devtools';
+import { useStrict } from 'mobx';
 import { Link } from 'react-router-dom';
 
-// useStrict(true);
-// @inject('store')
-// @observer
+useStrict(true);
+@inject('store')
+@observer
 class App extends Component {
   render() {
     console.log(this.props);
@@ -23,6 +23,7 @@ class App extends Component {
           </li>
         </ul>
         {this.props.children}
+        <DevTools />
       </div>
     );
   }
