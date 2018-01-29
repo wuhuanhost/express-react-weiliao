@@ -1,10 +1,10 @@
-import { observable, action, useStrict } from 'mobx';
-useStrict(true);
+// import { observable, action, useStrict } from 'mobx';
+import appStore from './appStore';
 class Store {
-  @observable number = 0;
-  @action
-  add = () => {
-    this.number++;
-  };
+  constructor() {
+    this.appStore = new appStore(this);
+  }
 }
 export default Store;
+
+
