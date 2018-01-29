@@ -19,11 +19,14 @@ const Routes = () => (
 );
 
 ReactDOM.render(
+  // 注入store对象
   <Provider store={new Store()}>
+    {/* 路由 */}
     <Router>
       <Routes />
     </Router>
   </Provider>,
   document.getElementById('root')
 );
+//pwa
 registerServiceWorker();
